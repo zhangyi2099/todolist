@@ -1,0 +1,12 @@
+%form{:action=>"/list/create" ,:method=>"POST"}	
+	%input{:type=>"text", :name=>"name", :id=>"name"}
+	%input{:type=>"submit", :value=>"Add"}
+	
+%h2 Lists:
+- unless @lists.empty?
+	%ul
+	-@lists.each do |list|
+		%li
+			%a{:href=>"/list/#{list.id}"}= list.name
+- else
+	%p EMPTY!

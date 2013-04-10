@@ -1,0 +1,5 @@
+%form{:action=>"/list/#{@list.id}",:method=>"post"}
+	%input{:name=>"_method",:type=>"hidden",:value=>"put"}
+	%input{:type=>"text",:name=>"name",:id=>"name",:value=>"#{@list.name}"}
+	%input{:id=>"list_submit",:name=>"commit",:type=>"submit",:value=>"Update"}
+	%a{href:"/list/#{@list.id}/delete"} Delete
